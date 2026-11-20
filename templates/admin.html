@@ -8,19 +8,21 @@
 </head>
 <body>
     <header class="dashboard-header">
-    <h1>WORKSHOP ADMIN</h1>
+        <h1>WORKSHOP ADMIN</h1>
     </header>
-        <nav class="nav-bar">
-         <a class="nav-btn" href="/dashboard">Recipes</a>
-            <button class="nav-btn" onclick="loadUsers()">People</button>
-            <button class="nav-btn" onclick="loadRecipes()">Database recipes</button>
-            <button class="nav-btn" onclick="loadRequests()">Approval requests</button>
-            </nav>
-        <main class="content-wrap">
-            <p id="admin-message" class="error-message"></p>
-            <section id="admin-content"></section>
-        </main>
-    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
 
+    <nav class="nav-bar">
+        <a class="nav-btn" href="/dashboard">Recipes</a>
+        <button class="nav-btn" onclick="loadUsers()">People</button>
+        <button class="nav-btn" onclick="loadRecipes()">Database recipes</button>
+        <button class="nav-btn" onclick="loadRequests()">Approval requests</button>
+    </nav>
+
+    <main class="content-wrap">
+        <p id="admin-message" class="error-message"></p>
+        <section id="admin-content"></section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
 </body>
 </html>

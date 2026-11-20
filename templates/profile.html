@@ -10,19 +10,24 @@
     <header class="dashboard-header">
         <h1>YOUR PROFILE</h1>
     </header>
+
     <main class="form-panel">
         <a href="/dashboard">← Back to recipes</a>
         <h2>About you</h2>
         <p class="subtitle">Add a little context for the recipes you share.</p>
+
         <div id="profile-message" class="success-message"></div>
+
         <form id="profile-form">
             <label>Display name<input class="form-control" name="display_name"></label>
             <label>Location<input class="form-control" name="location"></label>
             <label>Website<input class="form-control" name="website" type="url"></label>
             <label>About you<textarea class="form-control" name="bio" rows="5"></textarea></label>
+
             <button class="login-btn">Save profile</button>
-         </form>
+        </form>
     </main>
+
     <script src="{{ url_for('static', filename='js/profile.js') }}"></script>
 </body>
 </html>

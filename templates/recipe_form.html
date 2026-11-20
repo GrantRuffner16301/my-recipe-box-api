@@ -1,16 +1,13 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Recipe · Recipe Workshop</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-
 <body>
     <main class="form-panel">
-
         <a href="/dashboard">← Back to recipes</a>
         <h2 id="form-title">Recipe details</h2>
         <div id="form-error" class="error-message"></div>
@@ -20,14 +17,14 @@
                 Recipe name<input class="form-control" name="title" required>
             </label>
 
-            <label>Ingredients
-                <textarea class="form-control" name="ingredients" rows="5" required>
-                </textarea>
+            <label>
+                Ingredients
+                <textarea class="form-control" name="ingredients" rows="5" required></textarea>
             </label>
 
-            <label>Instructions
-                <textarea class="form-control" name="instructions" rows="7">
-                </textarea>
+            <label>
+                Instructions
+                <textarea class="form-control" name="instructions" rows="7"></textarea>
             </label>
 
             <label class="check-label">
@@ -36,11 +33,9 @@
 
             <button class="login-btn">Save recipe</button>
         </form>
-
     </main>
 
     <script>window.recipeId={{ recipe_id|tojson }};</script>
     <script src="{{ url_for('static', filename='js/recipe-form.js') }}"></script>
-
 </body>
 </html>

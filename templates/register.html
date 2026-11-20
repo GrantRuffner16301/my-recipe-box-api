@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Workshop - Register</title>
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static',
-        filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
-
 <body>
     <div class="register-container">
         <h1>RECIPE WORKSHOP</h1>
         <p class="subtitle">Create Your Account</p>
-        <div
-            id="error-message"
-            class="error-message">
-        </div>
 
-        <div
-            id="success-message"
-            class="success-message">
-        </div>
+        <div id="error-message" class="error-message"></div>
+        <div id="success-message" class="success-message"></div>
 
         <form id="register-form">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input
-                    id="username"
-                    class="form-control"
-                    type="text"
-                    required>
+                <input id="username" class="form-control" type="text" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email</label>
-                <input
-                    id="email"
-                    class="form-control"
-                    type="email"
-                    required>
+                <input id="email" class="form-control" type="email" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input
-                    id="password" 
-                    class="form-control" 
-                    type="password" 
-                    required>
+                <input id="password" class="form-control" type="password" required>
             </div>
+
             <button type="submit" class="register-btn">REGISTER</button>
         </form>
 
@@ -63,11 +39,6 @@
         </div>
     </div>
 
-    <script
-        src="{{ url_for('static',
-        filename='js/register.js') }}">
-    </script>
-
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
 </body>
-
 </html>
