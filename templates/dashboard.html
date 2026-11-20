@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Workshop Dashboard</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <h1>RECIPE WORKSHOP</h1>
+
+
+
+    <h2 id="welcome-user">
+        Welcome Back
+    </h2>
+
+</header>
+
+<nav class="nav-bar">
+
+    <button class="nav-btn"
+        onclick="loadMyRecipes()">
+
+        My Recipes
+
+    </button>
+
+    <button class="nav-btn" onclick="loadAllRecipes()">All Recipes</button>
+
+    <button class="nav-btn"
+        onclick="loadPublicRecipes()">
+
+        Public Recipes
+
+    </button>
+
+    <button class="nav-btn"
+        onclick="showCreateRecipe()">
+
+        Create Recipe
+
+    </button>
+
+    <button class="nav-btn"
+        onclick="window.location.href='/profile'">
+
+        Profile
+
+    </button>
+
+    <button
+        id="logout-btn"
+        class="nav-btn">
+
+        Logout
+
+    </button>
+
+</nav>
+
+<div id="admin-link" class="nav-bar" style="display:none"><a class="nav-btn" href="/admin">Admin Console</a></div>
+<div id="owner-link" class="nav-bar" style="display:none"><a class="nav-btn" href="/owner/requests">Recipe approvals</a></div>
+<div id="notifications" class="notification-list" aria-live="polite"></div>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+        <div class="stat-number" id="recipe-count">
+            0
+        </div>
+        <div class="stat-label">
+            Total Recipes
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number" id="public-count">
+            0
+        </div>
+        <div class="stat-label">
+            Public Recipes
+        </div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number" id="private-count">
+            0
+        </div>
+        <div class="stat-label">
+            Private Recipes
+        </div>
+    </div>
+
+</section>
+
+<h2 class="section-title">
+    My Recipes
+</h2>
+
+<section
+    class="recipe-grid"
+    id="recipe-grid">
+
+</section>
+
+<script
+src="{{ url_for('static', filename='js/auth.js') }}">
+</script>
+
+<script
+src="{{ url_for('static', filename='js/dashboard.js') }}">
+</script> 
+
+</body>
+</html>

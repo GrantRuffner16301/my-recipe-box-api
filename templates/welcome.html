@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Recipe Workshop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <main class="welcome-shell">
+        <div class="welcome-copy">
+            <span class="eyebrow">A community recipe box</span>
+            <h1>Good food<br><em>brings us together.</em></h1>
+            <p>Discover trusted favorites, keep your own kitchen notes, and share recipes with the people who matter. Browse public recipes as a guest, or join the workshop to save and contribute.</p>
+            <div class="welcome-actions">
+                <a class="primary-link" href="/register">Create account</a>
+                <a class="secondary-link" href="/login">Log in</a>
+                <a class="text-link" href="/guest">Continue as guest →</a>
+            </div>
+
+        </div>
+
+        <div class="welcome-art">
+            <div class="recipe-note">
+                <span>FROM THE COMMUNITY</span>
+                <strong>Sunday<br>Shakshuka</strong>
+                <small>Tomatoes · peppers · eggs</small>
+                <div class="note-doodle">✳</div>
+            </div>
+
+            <div class="art-caption">MADE TO BE PASSED AROUND</div>
+        </div>
+    </main>
+</body>
+</html>

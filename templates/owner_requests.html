@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Recipe approvals · Recipe Workshop</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+<body>
+    <header class="dashboard-header">
+        <h1>RECIPE APPROVALS</h1>
+        <p>Review suggested changes to recipes you own.</p>
+    </header>
+    <nav class="nav-bar">
+        <a class="nav-btn" href="/dashboard">Back to recipes</a>
+    </nav>
+    <main class="content-wrap">
+        <section id="owner-requests" class="recipe-grid"></section>
+    </main>
+    <script src="{{ url_for('static', filename='js/owner-requests.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Public recipes · Recipe Workshop</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <header class="dashboard-header">
+            <h1>RECIPE WORKSHOP</h1>
+            <p>Browsing as a guest · Public recipes only</p>
+        </header>
+        <nav class="nav-bar">
+            <a class="nav-btn" href="/">Home</a>
+            <a class="nav-btn" href="/login">Log in</a>
+            <a class="nav-btn" href="/register">Join the workshop</a>
+        </nav>
+        <main class="content-wrap">
+            <h2 class="section-title">Find something delicious</h2>
+            <input id="recipe-search" class="form-control search-box" placeholder="Search recipes, ingredients…">
+            <section class="recipe-grid" id="recipe-grid"></section>
+        </main>
+        <script src="{{ url_for('static', filename='js/guest.js') }}"></script>
+    </body>
+</html>
